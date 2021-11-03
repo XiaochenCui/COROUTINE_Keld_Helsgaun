@@ -1,0 +1,29 @@
+COROUTINE is a portable C++ library for coroutine sequencing. The facilities of the library are based on the coroutine primitives provided by the programming language SIMULA. 
+
+Two different implementations of the library are provided together with libraries for process-oriented discrete event simulation, random drawing, backtrack programming and handling of two-way lists.
+
+The code is distributed for research use. The author reserves all rights to the code.
+
+
+INSTRUCTIONS FOR INSTALLATION:  (Version 1.0 - May 1999)
+
+The software is available in two formats:
+
+				COROUTINE-1.0.tgz		(gzipped tar file, approximately 300 KB)
+				COROUTINE-1.0.sit		(Stuffit archive,  approximately 300 KB )
+
+If a UNIX machine is used, download the software in the first format. Next execute the following UNIX commands:
+
+				gzip -d COROUTINE-1.0.tgz
+				tar xvf COROUTINE-1.0.tar
+
+If a MacOS or a Windows machine is used, download the software in the second format. Next unstuff it with StuffIt ExpanderÅ (freeware available at http://www.aladdinsys.com). 
+
+For further instructions, see the installation guide and user guides in the DOC directory.
+
+
+
+													
+
+
+
