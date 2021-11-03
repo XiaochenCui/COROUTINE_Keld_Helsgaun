@@ -1,5 +1,5 @@
 #include "CBack.h"
-#include <iostream.h>
+#include <iostream>
 
 int Q[9];
 
@@ -12,8 +12,8 @@ void EightQueensProblem() {
         Q[r] = c; 
     }
     for (int r = 1; r <= 8; r++) 
-        cout << Q[r] << " "; 
-    cout << endl;
+        std::cout << Q[r] << " "; 
+    std::cout << std::endl;
     Backtrack();
 }
 

@@ -1,6 +1,6 @@
 #include "coroutine.h"
 #include "simset.h"
-#include <iostream.h>
+#include <iostream>
 
 int Amount;
 
@@ -15,7 +15,7 @@ public:
         if (Pred() != NULL)
             ((Coin*) Pred())->PrintSolution();
         if (Used > 0)
-            cout << Used << " of " << Denomination << endl;
+            std::cout << Used << " of " << Denomination << std::endl;
     }
 
     void Routine() {
@@ -33,7 +33,7 @@ public:
                 Number += Used;
             }
             if (Pred() == NULL) {
-                cout << "No solution" << endl;
+                std::cout << "No solution" << std::endl;
                 Detach(); 
             }
             Resume((Coin*) Pred());
@@ -43,8 +43,8 @@ public:
 
 
 void CashDispensor() {
-    cout << "Amount to be paid: ";
-    cin >> Amount;	
+    std::cout << "Amount to be paid: ";
+    std::cin >> Amount;	
 
     Head *List = new Head;
     (new Coin(1000,19))->Into(List);

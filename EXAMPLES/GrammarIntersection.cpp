@@ -1,5 +1,5 @@
 #include "CBack.h"
-#include <iostream.h>
+#include <iostream>
 
 const int strmax = 25;
 
@@ -125,14 +125,14 @@ void GrammarIntersection() {
         ClearAll();
     }
     if (strfound) {
-        cout << "Success, string = ";
+        std::cout << "Success, string = ";
         for (int i = 0; i < k; i++) 
-            cout << str[i];
-        cout << endl;
+            std::cout << str[i];
+        std::cout << std::endl;
     }
     else
-        cout << "No common string of length less than or equal to "
-             << lim << endl;
+        std::cout << "No common string of length less than or equal to "
+             << lim << std::endl;
 }
 
 int main() Backtracking(GrammarIntersection())

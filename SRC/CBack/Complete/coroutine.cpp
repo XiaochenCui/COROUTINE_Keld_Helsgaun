@@ -1,7 +1,7 @@
 #define Synchronize // {jmp_buf E; if (!setjmp(E)) longjmp(E,1);}
 
 #include "coroutine.h"
-#include <iostream.h>
+#include <iostream>
 #include <stdlib.h>
 #include <string.h>
 
@@ -23,7 +23,7 @@ long Merit;
 static Coroutine *Current = 0, *Next;
 
 static void Error(const char *Message) {
-    cerr << "Error: " << Message << endl; 
+    std::cerr << "Error: " << Message << std::endl; 
     exit(0);
 }
 

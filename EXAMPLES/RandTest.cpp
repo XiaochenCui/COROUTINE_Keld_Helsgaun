@@ -1,5 +1,5 @@
 #include "coroutine.h"
-#include <iostream.h>
+#include <iostream>
 
 class Rand : public Coroutine {
 public:
@@ -21,7 +21,7 @@ private:
 void RandTest() {
     Rand *R = new Rand;
     for (int i = 1; i <= 20; i++) 
-    cout << R->Next() << endl;
+    std::cout << R->Next() << std::endl;
 }
 
 int main() Sequencing(RandTest())

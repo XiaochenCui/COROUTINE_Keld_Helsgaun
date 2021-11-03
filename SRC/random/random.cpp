@@ -1,5 +1,5 @@
 #include "random.h"
-#include <iostream.h>
+#include <iostream>
 #include <limits.h>
 
 #define RAN 1220703125
@@ -8,7 +8,7 @@
 #define Random ((NextU + 0.5) / (MAXU + 1.0))
 
 static void Error(const char *Message) {
-    cerr << "Error: " << Message << endl; 
+    std::cerr << "Error: " << Message << std::endl; 
     exit(0);
 }
 

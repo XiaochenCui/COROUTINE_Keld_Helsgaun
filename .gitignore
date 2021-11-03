@@ -1,1 +1,13 @@
+# mac stuff
 .DS_Store
+
+# cmake stuff
+CMakeCache.txt
+CMakeFiles/
+build/
+cmake_install.cmake
+Makefile
+bin/
+
+# vscode stuff
+.vscode/

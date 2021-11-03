@@ -1,5 +1,5 @@
 #include "simulation.h"
-#include <iostream.h>
+#include <iostream>
 
 Head *TeaRoom, *WaitingLine;
 double ThroughTime, SimPeriod, P; 
@@ -46,10 +46,10 @@ class CarGen : public Process {
 };
 
 void Report() {
-    cout << N << " Car washer simulation\n";
-    cout << "No.of cars through the system = " << NoOfCustomers << endl;
-    cout << "Av.elapsed time = " << ThroughTime/NoOfCustomers << endl;
-    cout << "Maximum queue length = " << MaxLength << endl;
+    std::cout << N << " Car washer simulation\n";
+    std::cout << "No.of cars through the system = " << NoOfCustomers << std::endl;
+    std::cout << "Av.elapsed time = " << ThroughTime/NoOfCustomers << std::endl;
+    std::cout << "Maximum queue length = " << MaxLength << std::endl;
 }
 
 void CarWash() {

@@ -1,5 +1,5 @@
 #include "coroutine.h"
-#include <iostream.h>
+#include <iostream>
 
 const int CardLength = 8, LineLength = 12;
 char Card[CardLength], Line[LineLength], c1, c2;
@@ -9,7 +9,7 @@ class Reader : public Coroutine {
     void Routine() {
         for (;;) {
             for (int i = 0; i < CardLength; i++)
-                cin >> Card[i];
+                std::cin >> Card[i];
         Resume(theDisassembler);
     }
 }
@@ -58,7 +58,7 @@ class Assembler : public Coroutine {
         for (;;) {
             for (int i = 0; i < LineLength; i++) {
                 Line[i] = c2;
-            if (c2 == '€') {
+            if (c2 == 'ï¿½') {
                 while (++i < LineLength)
                     Line[i] = ' ';
                 Resume(thePrinter);
@@ -75,8 +75,8 @@ class Printer : public Coroutine {
     void Routine() {
         for (;;) {
             for (int i = 0; i < LineLength; i++) 
-                cout << Line[i];
-            cout << endl;
+                std::cout << Line[i];
+            std::cout << std::endl;
             Resume(theAssembler);
         }
     }	

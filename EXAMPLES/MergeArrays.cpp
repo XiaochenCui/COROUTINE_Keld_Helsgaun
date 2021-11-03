@@ -1,5 +1,5 @@
 #include "coroutine.h"
-#include <iostream.h>
+#include <iostream>
 
 int A[] = {1,5,6,8,10,12,15,17};
 int B[] = {2,4,7,9,11,13,14,18,20,30}; 
@@ -33,8 +33,8 @@ void MergeArrays() {
     C = new int[m+n]; CIndex = 0; 
     Resume(X);
     for (int j = 0; j < m+n; j++) 
-        cout << C[j] << " ";
-    cout << endl;
+        std::cout << C[j] << " ";
+    std::cout << std::endl;
 }
 
 int main() Sequencing(MergeArrays())

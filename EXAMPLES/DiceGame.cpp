@@ -1,6 +1,6 @@
 #include "coroutine.h"
 #include <stdlib.h>
-#include <iostream.h>
+#include <iostream>
 
 class Player : public Coroutine {
 public: 
@@ -12,7 +12,7 @@ public:
         int Sum = 0;
         while ((Sum += rand()%6+1) < 100)
             Resume(Next);
-        cout << "The winner is player " << Id << endl;
+        std::cout << "The winner is player " << Id << std::endl;
     }
 };
 

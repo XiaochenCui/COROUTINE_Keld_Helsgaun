@@ -1,5 +1,5 @@
 #include "coroutine.h"
-#include <iostream.h>
+#include <iostream>
 
 class Permuter : public Coroutine {
 public: 
@@ -33,8 +33,8 @@ void PrintPermutations(int n) {
     Call(P);
     while (P->More) {
         for (int i = 1; i <= n; i++)
-            cout << P->p[i] << " ";
-        cout << endl; 
+            std::cout << P->p[i] << " ";
+        std::cout << std::endl; 
         Call(P);
     } 
 }

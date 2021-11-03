@@ -1,5 +1,5 @@
 #include "CBack.h"
-#include <iostream.h>
+#include <iostream>
 #include <limits.h>
 
 const int NodeMax = 100, DegreeMax = 5;
@@ -57,7 +57,7 @@ void Treewalk() {
         Call(T[i]);                     // call current subsystem
         i = 1 - i;                      // switch to other subsystem
     } while (Best < OldBest);
-    cout << "Tree " << i << " has minimum terminal path" << endl;  	
+    std::cout << "Tree " << i << " has minimum terminal path" << std::endl;  	
 }
 
 int main() Backtracking(Treewalk())

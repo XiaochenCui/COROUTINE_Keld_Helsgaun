@@ -1,12 +1,12 @@
 #include "CBack.h"
-#include <iostream.h>
+#include <iostream>
 #include <setjmp.h>
 
 void (*Fiasco) () = 0;
 int BreadthFirst = 0;
 
 static void Error(const char *Message) {
-    cerr << "Error: " << Message << endl; 
+    std::cerr << "Error: " << Message << std::endl; 
     exit(0);
 }
 

@@ -1,5 +1,5 @@
 #include "coroutine.h"
-#include <iostream.h>
+#include <iostream>
 #include <limits.h>
 
 class Tree {
@@ -68,9 +68,9 @@ void MergeTrees() {
             	break;
             Call(T1);
 		}
-        cout << min << " ";
+        std::cout << min << " ";
     }
-    cout << endl; 
+    std::cout << std::endl; 
 }
 
 int main() Sequencing(MergeTrees())

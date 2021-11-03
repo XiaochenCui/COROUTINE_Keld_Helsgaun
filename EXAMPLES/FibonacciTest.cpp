@@ -1,5 +1,5 @@
 #include "coroutine.h"
-#include <iostream.h>
+#include <iostream>
 
 class Fibonacci : public Coroutine {
 public:
@@ -21,7 +21,7 @@ private:
 void FibonacciTest() {
     Fibonacci *F = new Fibonacci;
     for (int i = 1; i <= 20; i++) 
-        cout << F->Next() << endl;
+        std::cout << F->Next() << std::endl;
 }
 
 int main() Sequencing(FibonacciTest())
