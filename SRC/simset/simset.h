@@ -1,6 +1,8 @@
 #ifndef SIMSET_H
 #define SIMSET_H
 
+class Link;
+
 class Linkage
 {
     friend class Link;

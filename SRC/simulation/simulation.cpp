@@ -1,5 +1,6 @@
 #include "simulation.h"
 #include <iostream>
+#include <stdlib.h>
 
 static void Error(const char *Msg) {
     std::cerr << "Error: " << Msg << std::endl; 

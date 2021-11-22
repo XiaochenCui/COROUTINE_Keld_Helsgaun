@@ -1,6 +1,8 @@
 #include "random.h"
 #include <iostream>
 #include <limits.h>
+#include <stdlib.h>
+#include <math.h>
 
 #define RAN 1220703125
 #define MAXU INT_MAX
