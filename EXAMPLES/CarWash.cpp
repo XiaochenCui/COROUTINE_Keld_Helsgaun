@@ -20,6 +20,9 @@ class Car : public Process
         NoOfCustomers++;
         ThroughTime += Time() - EntryTime;
     }
+
+public:
+    int ID;
 };
 
 class CarWasher : public Process
@@ -32,6 +35,7 @@ class CarWasher : public Process
             while (!WaitingLine->Empty())
             {
                 Car *Served = (Car *)WaitingLine->First();
+                std::cout << "Car washer: " << Time() << " " << Served->ID << std::endl;
                 Served->Out();
                 Hold(10);
                 Activate(Served);
@@ -40,7 +44,12 @@ class CarWasher : public Process
             Wait(TeaRoom);
         }
     }
+
+public:
+    int ID;
 };
+
+static int CAR_ID = 0;
 
 class CarGen : public Process
 {
@@ -48,7 +57,9 @@ class CarGen : public Process
     {
         while (Time() <= SimPeriod)
         {
-            Activate(new Car);
+            Car *car = new Car;
+            car->ID = CAR_ID++;
+            Activate(car);
             Hold(Negexp(1 / P, U));
         }
     }

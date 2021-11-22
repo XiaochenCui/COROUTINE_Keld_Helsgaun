@@ -78,6 +78,7 @@ double Time() { return SQS.SUC->EVTIME; }
 
 void Hold(double T)
 {
+    std::cout << "Hold(" << T << ")" << std::endl;
     Process *Q = SQS.SUC;
     if (T > 0)
         Q->EVTIME += T;
