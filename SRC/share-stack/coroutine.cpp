@@ -106,9 +106,6 @@ void Coroutine::Eat()
 
         // t.jmpb is restored here
 
-        PrintStackLayout();
-        std::cout << "size of task: " << sizeof(t) << std::endl;
-
         t.MyCoroutine->Routine(); // execute Routine
         t.MyCoroutine->Terminated = 1;
         t.used = 0; // mark as free
