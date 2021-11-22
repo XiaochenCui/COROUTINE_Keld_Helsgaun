@@ -15,7 +15,7 @@ set(PROJECT_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
-set(COROUTINE_LIB_DIR ${CMAKE_SOURCE_DIR}/SRC/share-stack)
+set(COROUTINE_LIB_DIR ${CMAKE_SOURCE_DIR}/SRC/copy-stack)
 add_library(coroutine STATIC ${COROUTINE_LIB_DIR}/coroutine.h ${COROUTINE_LIB_DIR}/coroutine.cpp)
 
 set(TARGET_LIST TestProgram MinimalExample TextTransformation TelegamFilter)
