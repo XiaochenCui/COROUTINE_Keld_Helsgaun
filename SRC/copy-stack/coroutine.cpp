@@ -112,6 +112,7 @@ inline void Coroutine::StoreStack()
 
 inline void Coroutine::Enter()
 {
+
     if (!Terminated(Current))
     {
         Current->StoreStack();
