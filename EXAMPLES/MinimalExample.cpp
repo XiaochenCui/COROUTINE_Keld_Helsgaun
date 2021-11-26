@@ -89,6 +89,12 @@ void NestedRoutine()
     std::cout << "start" << std::endl;
     Coroutine *n = new Nest;
     Call(n);
+
+    std::cout << "reset" << std::endl;
+    Coroutine *n1 = new Nest;
+    nestLevel = 0;
+    Call(n1);
+
     std::cout << "end" << std::endl;
 }
 

@@ -86,6 +86,8 @@ void Coroutine::Eat()
             t.next->prev = &t;
     }
 
+    // std::cout << std::endl;
+    // std::cout << "setjmp to task " << &t << std::endl;
     if (!setjmp(t.jmpb)) // wait
         longjmp(MyTask->jmpb, 1);
 
