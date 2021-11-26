@@ -58,7 +58,7 @@ class Assembler : public Coroutine {
         for (;;) {
             for (int i = 0; i < LineLength; i++) {
                 Line[i] = c2;
-            if (c2 == '�') {
+            if (c2 == '\n') { // I don't know the original character and propose of this line
                 while (++i < LineLength)
                     Line[i] = ' ';
                 Resume(thePrinter);
